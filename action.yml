@@ -16,6 +16,10 @@ inputs:
     description: Substitution keys to use when cache miss
     default: ''
     required: false
+  root-dir:
+    description: Key to use as cache identifier
+    default: ''
+    required: false
 
 outputs:
   cache-hit:
