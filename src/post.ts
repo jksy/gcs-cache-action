@@ -37,7 +37,15 @@ async function main() {
     return;
   }
 
-  const workspace = process.env.GITHUB_WORKSPACE ?? process.cwd();
+  if (state.rootDir) {
+    process.chdir(state.rootDir);
+    console.log('🌀 rootDir: ' + state.rootDir);
+  } else if (process.env.GITHUB_WORKSPACE) {
+    process.chdir(process.env.GITHUB_WORKSPACE);
+    console.log('🌀 GITHUB_WORKSPACE: ' + state.rootDir);
+  }
+
+  const workspace = process.cwd();
   const globber = await glob.create(state.path, {
     implicitDescendants: false,
   });
