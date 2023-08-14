@@ -17,8 +17,12 @@ inputs:
     default: ''
     required: false
   root-dir:
-    description: Key to use as cache identifier
+    description: Restore directory
     default: ''
+    required: false
+  force-upload:
+    description: Key to upload forcely
+    default: 'false'
     required: false
 
 outputs:
