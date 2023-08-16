@@ -106,6 +106,7 @@ async function main() {
       bucket: inputs.bucket,
       path: inputs.path,
       cacheHitKind: 'none',
+      forceUpload: inputs.forceUpload,
       targetFileName: exactFileName,
       rootDir: inputs.rootDir,
     });
@@ -136,6 +137,7 @@ async function main() {
       bucket: inputs.bucket,
       path: inputs.path,
       cacheHitKind: 'none',
+      forceUpload: inputs.forceUpload,
       targetFileName: exactFileName,
       rootDir: inputs.rootDir,
     });
@@ -174,6 +176,7 @@ async function main() {
       path: inputs.path,
       bucket: inputs.bucket,
       cacheHitKind: bestMatchKind,
+      forceUpload: inputs.forceUpload,
       targetFileName: exactFileName,
       rootDir: inputs.rootDir,
     });
